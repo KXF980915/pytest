@@ -1,0 +1,875 @@
+INFO - 2023-07-21 22:46:45,465 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：用户登录
+INFO - 2023-07-21 22:46:45,466 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2023-07-21 22:46:45,466 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2023-07-21 22:46:45,466 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,467 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:46:45,467 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+INFO - 2023-07-21 22:46:45,477 - sendrequests.py:25 -[sendrequests:send_requests] - cookie：{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1MDgwNSwianRpIjoiOTFiN2RlMTAtNGIwYi00NWY4LTg4YWQtZjlkODZmYmE5OWRiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1MDgwNSwiZXhwIjoxNjg5OTUxNzA1fQ.PpIC3Hew6IFyTs3GiMOT5SO1-XNOmepaghyWlJI0opM'}}
+INFO - 2023-07-21 22:46:45,477 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "登录成功",
+  "msg_code": 200,
+  "token": "cBED0909B59d5c4fbBd5d62f3cF45",
+  "userId": "6376847106126007044"
+}
+
+INFO - 2023-07-21 22:46:45,478 - apiutil.py:146 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2023-07-21 22:46:45,479 - apiutil.py:146 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2023-07-21 22:46:45,479 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '登录成功'}}]
+INFO - 2023-07-21 22:46:45,479 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->登录成功；实际结果-->登录成功
+INFO - 2023-07-21 22:46:45,481 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,481 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,485 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：获取物料信息
+INFO - 2023-07-21 22:46:45,486 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/getMaterial
+INFO - 2023-07-21 22:46:45,486 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：获取物料信息
+INFO - 2023-07-21 22:46:45,486 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,486 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1MDgwNSwianRpIjoiOTFiN2RlMTAtNGIwYi00NWY4LTg4YWQtZjlkODZmYmE5OWRiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1MDgwNSwiZXhwIjoxNjg5OTUxNzA1fQ.PpIC3Hew6IFyTs3GiMOT5SO1-XNOmepaghyWlJI0opM'}
+INFO - 2023-07-21 22:46:45,490 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "material": [
+    "1676511586856882178",
+    "1676511586856882134",
+    "1676511524756882178",
+    "1676590766856882178",
+    "1676511586812182178"
+  ],
+  "message": "操作成功"
+}
+
+INFO - 2023-07-21 22:46:45,492 - apiutil.py:175 -[apiutil:extract_data_list] - json提取到参数：{'materialId': ['1676511586856882178', '1676511586856882134', '1676511524756882178', '1676590766856882178', '1676511586812182178']}
+INFO - 2023-07-21 22:46:45,493 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 22:46:45,493 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 22:46:45,495 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,498 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,501 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,505 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：获取商品列表
+INFO - 2023-07-21 22:46:45,505 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/coupApply/cms/goodsList
+INFO - 2023-07-21 22:46:45,505 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：获取商品列表
+INFO - 2023-07-21 22:46:45,506 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,506 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:46:45,507 - sendrequests.py:48 -[sendrequests:run_main] - 请求参数：{'params': {'msgType': 'getHandsetListOfCust', 'page': 1}}
+INFO - 2023-07-21 22:46:45,511 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "api_info": "today:21 max:10000 all[90=21+33+36];expires:2030-12-31",
+  "cache": 0,
+  "error_code": "0000",
+  "goodsList": [
+    {
+      "goodsId": "18382788819",
+      "goods_count": "233",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/bcf848aa71c6389607ae7a84b70f1543.jpeg",
+      "goods_name": "【2件套】套装秋冬新款仿獭兔毛钉珠皮草毛毛短外套加厚大衣女装",
+      "original_price": "",
+      "unit_price": "￥99.00"
+    },
+    {
+      "goodsId": "33809635011",
+      "goods_count": "521",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/176019babfdecffa1d9f98f40b7e99b4.jpeg",
+      "goods_name": "好奇小森林心钻装纸尿裤M22拉拉裤L18/XL14超薄透气裤型尿不湿 1件装",
+      "original_price": "",
+      "unit_price": "￥108.00"
+    },
+    {
+      "goodsId": "56996760797",
+      "goods_count": "1181",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "冻干鸡小胸整块增肥营养发腮狗狗零食新手养猫零食幼猫零食100g",
+      "original_price": "",
+      "unit_price": "￥17.80"
+    },
+    {
+      "goodsId": "82193785267",
+      "goods_count": "3000+",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "【自营】ISB伊珊娜意大利水果系列宠物犬猫沐浴露除臭香波护毛素",
+      "original_price": "",
+      "unit_price": "￥650.00"
+    },
+    {
+      "goodsId": "74190550836",
+      "goods_count": "1000+",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "【新品零0CM嵌入式】海尔电冰箱410L家用法式四门多门官方正品",
+      "original_price": "",
+      "unit_price": "￥5746.00"
+    }
+  ],
+  "reason": "",
+  "request_id": "request_id",
+  "secache": "c98b29872e8a4b28859db207944ba817",
+  "secache_date": "2023-07-21 22:46:33",
+  "secache_time": 1689950793000,
+  "translate_language": "zh-CN"
+}
+
+INFO - 2023-07-21 22:46:45,512 - apiutil.py:175 -[apiutil:extract_data_list] - json提取到参数：{'productId': ['18382788819', '33809635011', '56996760797', '82193785267', '74190550836']}
+INFO - 2023-07-21 22:46:45,513 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'error_code': '0000'}}]
+INFO - 2023-07-21 22:46:45,513 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->0000；实际结果-->0000
+INFO - 2023-07-21 22:46:45,514 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,515 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,518 - test_debug_api.py:15 -[test_debug_api:setup_class] - 环境初始化....
+INFO - 2023-07-21 22:46:45,518 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,536 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：新增用户
+INFO - 2023-07-21 22:46:45,538 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/addUser
+INFO - 2023-07-21 22:46:45,538 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：正常新增用户名*新增用户长度在allure中展示校验
+INFO - 2023-07-21 22:46:45,538 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,539 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:46:45,540 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'username': 'testadduser', 'password': 'tset6789890', 'role_id': 123456789, 'dates': '2023-07-21 22:46:45', 'phone': 13800000000, 'token': 'cBED0909B59d5c4fbBd5d62f3cF45'}}
+INFO - 2023-07-21 22:46:45,567 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "新增成功",
+  "msg_code": 200
+}
+
+ERROR - 2023-07-21 22:46:45,568 - apiutil.py:151 -[apiutil:extract_data] - 'bool' object is not subscriptable
+INFO - 2023-07-21 22:46:45,569 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'status_code': 200}}, {'contains': {'msg': '新增成功'}}]
+INFO - 2023-07-21 22:46:45,569 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->新增成功；实际结果-->新增成功
+INFO - 2023-07-21 22:46:45,570 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,571 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,574 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,580 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：新增用户
+INFO - 2023-07-21 22:46:45,580 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/addUser
+INFO - 2023-07-21 22:46:45,580 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：异常新增用户校验
+INFO - 2023-07-21 22:46:45,581 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,581 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:46:45,582 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'username': 'testadduser', 'password': 'tset6789890', 'role_id': 123456789, 'dates': '2023-07-21 22:46:45', 'phone': 13800000000, 'token': 'cBED0909B59d5c4fbBd5d62f3cF45'}}
+INFO - 2023-07-21 22:46:45,585 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "新增成功",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 22:46:45,586 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'status_code': 200}}, {'contains': {'msg': '新增失败'}}]
+ERROR - 2023-07-21 22:46:45,587 - assertions.py:46 -[assertions:contains_assert] - 响应文本断言失败：预期结果为【新增失败】,实际结果为【新增成功】
+ERROR - 2023-07-21 22:46:45,587 - assertions.py:112 -[assertions:assert_result] - 测试失败
+ERROR - 2023-07-21 22:46:45,587 - apiutil.py:115 -[apiutil:specification_yaml] - 
+INFO - 2023-07-21 22:46:45,751 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,752 - test_debug_api.py:52 -[test_debug_api:teardown_class] - 正在清理测试数据....
+INFO - 2023-07-21 22:46:45,756 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,766 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：货主下单
+INFO - 2023-07-21 22:46:45,767 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/create
+INFO - 2023-07-21 22:46:45,767 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：货主下单
+INFO - 2023-07-21 22:46:45,767 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,767 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1MDgwNSwianRpIjoiOTFiN2RlMTAtNGIwYi00NWY4LTg4YWQtZjlkODZmYmE5OWRiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1MDgwNSwiZXhwIjoxNjg5OTUxNzA1fQ.PpIC3Hew6IFyTs3GiMOT5SO1-XNOmepaghyWlJI0opM'}
+INFO - 2023-07-21 22:46:45,768 - sendrequests.py:45 -[sendrequests:run_main] - 请求参数：{'json': {'orderInfo': {'template': 'define', 'urgentType': 2, 'cusName': '总仓', 'orderType': 1, 'charter': 2, 'planType': 1, 'transStartTime': '2023-07-21 22:46:45', 'transEndTime': '2023-07-16 10:38:58', 'orderMark': '货主备注', 'cusId': 1661242770195464193}, 'orderCapacityList': [{'materialCategoryId': '1676511586856882134', 'materialCategory': '粮食', 'materialName': '小麦', 'materialUnit': 'KG', 'materialUnitId': 1660891402561581058, 'settlementUnit': 'KG', 'syncMaterialId': 4, 'materialId': 1661349087048306690, 'sendCusId': 1661663745663741954, 'sendAdrName': '长宁县五谷粮食购销有限责任公司'}]}}
+INFO - 2023-07-21 22:46:45,795 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功",
+  "orderNo": "DD20230721224633238"
+}
+
+INFO - 2023-07-21 22:46:45,797 - apiutil.py:146 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2023-07-21 22:46:45,798 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 22:46:45,798 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 22:46:45,799 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,802 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,806 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,817 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：集团接单
+INFO - 2023-07-21 22:46:45,817 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/pc/order/master/receive
+INFO - 2023-07-21 22:46:45,817 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：集团接单
+INFO - 2023-07-21 22:46:45,817 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,817 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1MDgwNSwianRpIjoiOTFiN2RlMTAtNGIwYi00NWY4LTg4YWQtZjlkODZmYmE5OWRiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1MDgwNSwiZXhwIjoxNjg5OTUxNzA1fQ.PpIC3Hew6IFyTs3GiMOT5SO1-XNOmepaghyWlJI0opM'}
+INFO - 2023-07-21 22:46:45,818 - sendrequests.py:45 -[sendrequests:run_main] - 请求参数：{'json': {'orderId': 'DD20230721224633238'}}
+INFO - 2023-07-21 22:46:45,845 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功"
+}
+
+INFO - 2023-07-21 22:46:45,846 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 22:46:45,847 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 22:46:45,847 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,848 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,851 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,860 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：集团分配物流公司
+INFO - 2023-07-21 22:46:45,861 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/pc/order/assign
+INFO - 2023-07-21 22:46:45,861 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：集团分配物流公司
+INFO - 2023-07-21 22:46:45,862 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,862 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1MDgwNSwianRpIjoiOTFiN2RlMTAtNGIwYi00NWY4LTg4YWQtZjlkODZmYmE5OWRiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1MDgwNSwiZXhwIjoxNjg5OTUxNzA1fQ.PpIC3Hew6IFyTs3GiMOT5SO1-XNOmepaghyWlJI0opM'}
+INFO - 2023-07-21 22:46:45,863 - sendrequests.py:45 -[sendrequests:run_main] - 请求参数：{'json': {'orderId': 'DD20230721224633238', 'orgId': '4140913758110176843'}}
+INFO - 2023-07-21 22:46:45,866 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功"
+}
+
+INFO - 2023-07-21 22:46:45,867 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 22:46:45,867 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 22:46:45,868 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,869 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,873 - test_debug_api.py:15 -[test_debug_api:setup_class] - 环境初始化....
+INFO - 2023-07-21 22:46:45,873 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,878 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：修改用户
+INFO - 2023-07-21 22:46:45,879 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/updateUser
+INFO - 2023-07-21 22:46:45,879 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：正常修改用户信息
+INFO - 2023-07-21 22:46:45,880 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,880 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:46:45,881 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'username': 'testadduser', 'password': 'tset6789#$123', 'role_id': 89588181111112343, 'dates': '2023-12-31', 'phone': 13800000000}}
+INFO - 2023-07-21 22:46:45,885 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "更新成功",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 22:46:45,886 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'status_code': 200}}, {'contains': {'msg': '更新成功'}}]
+INFO - 2023-07-21 22:46:45,886 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->更新成功；实际结果-->更新成功
+INFO - 2023-07-21 22:46:45,887 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,888 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,893 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,896 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：删除用户
+INFO - 2023-07-21 22:46:45,896 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/deleteUser
+INFO - 2023-07-21 22:46:45,897 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：有效删除用户
+INFO - 2023-07-21 22:46:45,897 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,898 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:46:45,900 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': 123839387391912}}
+INFO - 2023-07-21 22:46:45,928 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "删除成功!",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 22:46:45,928 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '删除成功'}}]
+INFO - 2023-07-21 22:46:45,929 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->删除成功；实际结果-->删除成功!
+INFO - 2023-07-21 22:46:45,929 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,931 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,934 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,937 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：删除用户
+INFO - 2023-07-21 22:46:45,938 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/deleteUser
+INFO - 2023-07-21 22:46:45,938 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：无效删除用户
+INFO - 2023-07-21 22:46:45,938 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,938 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:46:45,939 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': 1212718219298}}
+INFO - 2023-07-21 22:46:45,942 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "msg": "删除失败，用户id不存在!",
+  "msg_code": 9001
+}
+
+INFO - 2023-07-21 22:46:45,943 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '删除失败'}}]
+INFO - 2023-07-21 22:46:45,944 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->删除失败；实际结果-->删除失败，用户id不存在!
+INFO - 2023-07-21 22:46:45,945 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,947 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,949 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,952 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：删除用户
+INFO - 2023-07-21 22:46:45,952 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/deleteUser
+INFO - 2023-07-21 22:46:45,953 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：删除接口传参类型错误
+INFO - 2023-07-21 22:46:45,953 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,953 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:46:45,954 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': '1212718219298'}}
+INFO - 2023-07-21 22:46:45,957 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "msg": "删除失败，用户id不存在!",
+  "msg_code": 9001
+}
+
+INFO - 2023-07-21 22:46:45,958 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '删除失败'}}]
+INFO - 2023-07-21 22:46:45,958 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->删除失败；实际结果-->删除失败，用户id不存在!
+INFO - 2023-07-21 22:46:45,959 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,960 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,963 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:46:45,966 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：用户查询
+INFO - 2023-07-21 22:46:45,966 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/queryUser
+INFO - 2023-07-21 22:46:45,967 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：有效查询用户
+INFO - 2023-07-21 22:46:45,967 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:46:45,967 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:46:45,968 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': 123839387391912}}
+INFO - 2023-07-21 22:46:45,971 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "查询成功!",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 22:46:45,972 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '查询成功'}}, {'eq': {'msg_code': 200}}]
+INFO - 2023-07-21 22:46:45,972 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->查询成功；实际结果-->查询成功!
+INFO - 2023-07-21 22:46:45,974 - assertions.py:61 -[assertions:equal_assert] - 相等断言成功：接口实际结果：{'msg_code': 200}，等于预期结果：{'msg_code': 200}
+INFO - 2023-07-21 22:46:45,975 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:46:45,977 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:46:45,978 - test_debug_api.py:52 -[test_debug_api:teardown_class] - 正在清理测试数据....
+INFO - 2023-07-21 22:47:24,444 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：用户登录
+INFO - 2023-07-21 22:47:24,445 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2023-07-21 22:47:24,447 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2023-07-21 22:47:24,448 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"}
+INFO - 2023-07-21 22:47:24,449 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:47:24,452 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': '{"user_name": "test01", "passwd": "admin123"}'}
+ERROR - 2023-07-21 22:47:24,454 - sendrequests.py:53 -[sendrequests:run_main] - 'str' object has no attribute 'items'
+INFO - 2023-07-21 22:51:03,981 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：用户登录
+INFO - 2023-07-21 22:51:03,982 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2023-07-21 22:51:03,982 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2023-07-21 22:51:03,983 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:51:03,983 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:51:03,984 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+INFO - 2023-07-21 22:51:03,992 - sendrequests.py:25 -[sendrequests:send_requests] - cookie：{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1MTA2MywianRpIjoiMjE0OTIwZDItNDNlZS00NjczLTlmNjktMWIwNjIyZjQ5OTNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1MTA2MywiZXhwIjoxNjg5OTUxOTYzfQ.RI6pqmpM-h6Ul-J4LP-KgZD_OTHE_p66quREtgGYRxA'}}
+INFO - 2023-07-21 22:51:03,992 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "登录成功",
+  "msg_code": 200,
+  "token": "d0bCf73A37faeAb2Ea5c4cf83f7d3",
+  "userId": "6376847106126007044"
+}
+
+INFO - 2023-07-21 22:51:03,993 - apiutil.py:146 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2023-07-21 22:51:03,994 - apiutil.py:146 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2023-07-21 22:51:03,995 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '登录成功'}}]
+INFO - 2023-07-21 22:51:03,995 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->登录成功；实际结果-->登录成功
+INFO - 2023-07-21 22:51:03,996 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:03,996 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,001 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：获取物料信息
+INFO - 2023-07-21 22:51:04,001 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/getMaterial
+INFO - 2023-07-21 22:51:04,001 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：获取物料信息
+INFO - 2023-07-21 22:51:04,002 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,002 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1MTA2MywianRpIjoiMjE0OTIwZDItNDNlZS00NjczLTlmNjktMWIwNjIyZjQ5OTNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1MTA2MywiZXhwIjoxNjg5OTUxOTYzfQ.RI6pqmpM-h6Ul-J4LP-KgZD_OTHE_p66quREtgGYRxA'}
+INFO - 2023-07-21 22:51:04,005 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "material": [
+    "1676511586856882178",
+    "1676511586856882134",
+    "1676511524756882178",
+    "1676590766856882178",
+    "1676511586812182178"
+  ],
+  "message": "操作成功"
+}
+
+INFO - 2023-07-21 22:51:04,006 - apiutil.py:175 -[apiutil:extract_data_list] - json提取到参数：{'materialId': ['1676511586856882178', '1676511586856882134', '1676511524756882178', '1676590766856882178', '1676511586812182178']}
+INFO - 2023-07-21 22:51:04,007 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 22:51:04,008 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 22:51:04,009 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:04,011 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,014 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,019 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：获取商品列表
+INFO - 2023-07-21 22:51:04,019 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/coupApply/cms/goodsList
+INFO - 2023-07-21 22:51:04,019 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：获取商品列表
+INFO - 2023-07-21 22:51:04,020 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,020 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:51:04,020 - sendrequests.py:48 -[sendrequests:run_main] - 请求参数：{'params': {'msgType': 'getHandsetListOfCust', 'page': 1}}
+INFO - 2023-07-21 22:51:04,024 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "api_info": "today:21 max:10000 all[90=21+33+36];expires:2030-12-31",
+  "cache": 0,
+  "error_code": "0000",
+  "goodsList": [
+    {
+      "goodsId": "18382788819",
+      "goods_count": "233",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/bcf848aa71c6389607ae7a84b70f1543.jpeg",
+      "goods_name": "【2件套】套装秋冬新款仿獭兔毛钉珠皮草毛毛短外套加厚大衣女装",
+      "original_price": "",
+      "unit_price": "￥99.00"
+    },
+    {
+      "goodsId": "33809635011",
+      "goods_count": "521",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/176019babfdecffa1d9f98f40b7e99b4.jpeg",
+      "goods_name": "好奇小森林心钻装纸尿裤M22拉拉裤L18/XL14超薄透气裤型尿不湿 1件装",
+      "original_price": "",
+      "unit_price": "￥108.00"
+    },
+    {
+      "goodsId": "56996760797",
+      "goods_count": "1181",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "冻干鸡小胸整块增肥营养发腮狗狗零食新手养猫零食幼猫零食100g",
+      "original_price": "",
+      "unit_price": "￥17.80"
+    },
+    {
+      "goodsId": "82193785267",
+      "goods_count": "3000+",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "【自营】ISB伊珊娜意大利水果系列宠物犬猫沐浴露除臭香波护毛素",
+      "original_price": "",
+      "unit_price": "￥650.00"
+    },
+    {
+      "goodsId": "74190550836",
+      "goods_count": "1000+",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "【新品零0CM嵌入式】海尔电冰箱410L家用法式四门多门官方正品",
+      "original_price": "",
+      "unit_price": "￥5746.00"
+    }
+  ],
+  "reason": "",
+  "request_id": "request_id",
+  "secache": "c98b29872e8a4b28859db207944ba817",
+  "secache_date": "2023-07-21 22:46:33",
+  "secache_time": 1689950793000,
+  "translate_language": "zh-CN"
+}
+
+INFO - 2023-07-21 22:51:04,025 - apiutil.py:175 -[apiutil:extract_data_list] - json提取到参数：{'productId': ['18382788819', '33809635011', '56996760797', '82193785267', '74190550836']}
+INFO - 2023-07-21 22:51:04,026 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'error_code': '0000'}}]
+INFO - 2023-07-21 22:51:04,026 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->0000；实际结果-->0000
+INFO - 2023-07-21 22:51:04,027 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:04,028 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,031 - test_debug_api.py:15 -[test_debug_api:setup_class] - 环境初始化....
+INFO - 2023-07-21 22:51:04,032 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,049 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：新增用户
+INFO - 2023-07-21 22:51:04,050 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/addUser
+INFO - 2023-07-21 22:51:04,050 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：正常新增用户名*新增用户长度在allure中展示校验
+INFO - 2023-07-21 22:51:04,050 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,051 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:51:04,051 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'username': 'testadduser', 'password': 'tset6789890', 'role_id': 123456789, 'dates': '2023-07-21 22:51:04', 'phone': 13800000000, 'token': 'd0bCf73A37faeAb2Ea5c4cf83f7d3'}}
+INFO - 2023-07-21 22:51:04,055 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "新增成功",
+  "msg_code": 200
+}
+
+ERROR - 2023-07-21 22:51:04,056 - apiutil.py:151 -[apiutil:extract_data] - 'bool' object is not subscriptable
+INFO - 2023-07-21 22:51:04,056 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'status_code': 200}}, {'contains': {'msg': '新增成功'}}]
+INFO - 2023-07-21 22:51:04,057 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->新增成功；实际结果-->新增成功
+INFO - 2023-07-21 22:51:04,057 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:04,059 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,063 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,067 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：新增用户
+INFO - 2023-07-21 22:51:04,069 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/addUser
+INFO - 2023-07-21 22:51:04,069 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：异常新增用户校验
+INFO - 2023-07-21 22:51:04,069 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,070 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:51:04,070 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'username': 'testadduser', 'password': 'tset6789890', 'role_id': 123456789, 'dates': '2023-07-21 22:51:04', 'phone': 13800000000, 'token': 'd0bCf73A37faeAb2Ea5c4cf83f7d3'}}
+INFO - 2023-07-21 22:51:04,074 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "新增成功",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 22:51:04,075 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'status_code': 200}}, {'contains': {'msg': '新增失败'}}]
+ERROR - 2023-07-21 22:51:04,076 - assertions.py:46 -[assertions:contains_assert] - 响应文本断言失败：预期结果为【新增失败】,实际结果为【新增成功】
+ERROR - 2023-07-21 22:51:04,076 - assertions.py:112 -[assertions:assert_result] - 测试失败
+ERROR - 2023-07-21 22:51:04,076 - apiutil.py:115 -[apiutil:specification_yaml] - 
+INFO - 2023-07-21 22:51:04,234 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,235 - test_debug_api.py:52 -[test_debug_api:teardown_class] - 正在清理测试数据....
+INFO - 2023-07-21 22:51:04,241 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,250 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：货主下单
+INFO - 2023-07-21 22:51:04,250 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/create
+INFO - 2023-07-21 22:51:04,251 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：货主下单
+INFO - 2023-07-21 22:51:04,251 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,251 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1MTA2MywianRpIjoiMjE0OTIwZDItNDNlZS00NjczLTlmNjktMWIwNjIyZjQ5OTNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1MTA2MywiZXhwIjoxNjg5OTUxOTYzfQ.RI6pqmpM-h6Ul-J4LP-KgZD_OTHE_p66quREtgGYRxA'}
+INFO - 2023-07-21 22:51:04,253 - sendrequests.py:45 -[sendrequests:run_main] - 请求参数：{'json': {'orderInfo': {'template': 'define', 'urgentType': 2, 'cusName': '总仓', 'orderType': 1, 'charter': 2, 'planType': 1, 'transStartTime': '2023-07-21 22:51:04', 'transEndTime': '2023-07-16 10:38:58', 'orderMark': '货主备注', 'cusId': 1661242770195464193}, 'orderCapacityList': [{'materialCategoryId': '1676511586856882178', 'materialCategory': '粮食', 'materialName': '小麦', 'materialUnit': 'KG', 'materialUnitId': 1660891402561581058, 'settlementUnit': 'KG', 'syncMaterialId': 4, 'materialId': 1661349087048306690, 'sendCusId': 1661663745663741954, 'sendAdrName': '长宁县五谷粮食购销有限责任公司'}]}}
+INFO - 2023-07-21 22:51:04,256 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功",
+  "orderNo": "DD20230721224633238"
+}
+
+INFO - 2023-07-21 22:51:04,258 - apiutil.py:146 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2023-07-21 22:51:04,258 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 22:51:04,259 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 22:51:04,259 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:04,261 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,272 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,281 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：集团接单
+INFO - 2023-07-21 22:51:04,281 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/pc/order/master/receive
+INFO - 2023-07-21 22:51:04,281 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：集团接单
+INFO - 2023-07-21 22:51:04,281 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,282 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1MTA2MywianRpIjoiMjE0OTIwZDItNDNlZS00NjczLTlmNjktMWIwNjIyZjQ5OTNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1MTA2MywiZXhwIjoxNjg5OTUxOTYzfQ.RI6pqmpM-h6Ul-J4LP-KgZD_OTHE_p66quREtgGYRxA'}
+INFO - 2023-07-21 22:51:04,284 - sendrequests.py:45 -[sendrequests:run_main] - 请求参数：{'json': {'orderId': 'DD20230721224633238'}}
+INFO - 2023-07-21 22:51:04,288 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功"
+}
+
+INFO - 2023-07-21 22:51:04,289 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 22:51:04,290 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 22:51:04,290 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:04,292 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,296 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,308 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：集团分配物流公司
+INFO - 2023-07-21 22:51:04,309 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/pc/order/assign
+INFO - 2023-07-21 22:51:04,309 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：集团分配物流公司
+INFO - 2023-07-21 22:51:04,309 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,309 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1MTA2MywianRpIjoiMjE0OTIwZDItNDNlZS00NjczLTlmNjktMWIwNjIyZjQ5OTNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1MTA2MywiZXhwIjoxNjg5OTUxOTYzfQ.RI6pqmpM-h6Ul-J4LP-KgZD_OTHE_p66quREtgGYRxA'}
+INFO - 2023-07-21 22:51:04,311 - sendrequests.py:45 -[sendrequests:run_main] - 请求参数：{'json': {'orderId': 'DD20230721224633238', 'orgId': '4140913758110176843'}}
+INFO - 2023-07-21 22:51:04,316 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功"
+}
+
+INFO - 2023-07-21 22:51:04,318 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 22:51:04,318 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 22:51:04,319 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:04,321 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,323 - test_debug_api.py:15 -[test_debug_api:setup_class] - 环境初始化....
+INFO - 2023-07-21 22:51:04,324 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,329 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：修改用户
+INFO - 2023-07-21 22:51:04,329 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/updateUser
+INFO - 2023-07-21 22:51:04,330 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：正常修改用户信息
+INFO - 2023-07-21 22:51:04,330 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,330 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:51:04,331 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'username': 'testadduser', 'password': 'tset6789#$123', 'role_id': 89588181111112343, 'dates': '2023-12-31', 'phone': 13800000000}}
+INFO - 2023-07-21 22:51:04,335 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "更新成功",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 22:51:04,336 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'status_code': 200}}, {'contains': {'msg': '更新成功'}}]
+INFO - 2023-07-21 22:51:04,336 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->更新成功；实际结果-->更新成功
+INFO - 2023-07-21 22:51:04,337 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:04,339 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,342 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,346 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：删除用户
+INFO - 2023-07-21 22:51:04,346 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/deleteUser
+INFO - 2023-07-21 22:51:04,346 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：有效删除用户
+INFO - 2023-07-21 22:51:04,346 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,347 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:51:04,348 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': 123839387391912}}
+INFO - 2023-07-21 22:51:04,352 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "删除成功!",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 22:51:04,353 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '删除成功'}}]
+INFO - 2023-07-21 22:51:04,353 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->删除成功；实际结果-->删除成功!
+INFO - 2023-07-21 22:51:04,354 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:04,355 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,359 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,362 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：删除用户
+INFO - 2023-07-21 22:51:04,363 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/deleteUser
+INFO - 2023-07-21 22:51:04,363 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：无效删除用户
+INFO - 2023-07-21 22:51:04,363 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,363 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:51:04,364 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': 1212718219298}}
+INFO - 2023-07-21 22:51:04,367 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "msg": "删除失败，用户id不存在!",
+  "msg_code": 9001
+}
+
+INFO - 2023-07-21 22:51:04,368 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '删除失败'}}]
+INFO - 2023-07-21 22:51:04,368 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->删除失败；实际结果-->删除失败，用户id不存在!
+INFO - 2023-07-21 22:51:04,369 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:04,371 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,374 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,377 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：删除用户
+INFO - 2023-07-21 22:51:04,377 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/deleteUser
+INFO - 2023-07-21 22:51:04,378 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：删除接口传参类型错误
+INFO - 2023-07-21 22:51:04,378 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,378 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:51:04,379 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': '1212718219298'}}
+INFO - 2023-07-21 22:51:04,382 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "msg": "删除失败，用户id不存在!",
+  "msg_code": 9001
+}
+
+INFO - 2023-07-21 22:51:04,383 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '删除失败'}}]
+INFO - 2023-07-21 22:51:04,383 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->删除失败；实际结果-->删除失败，用户id不存在!
+INFO - 2023-07-21 22:51:04,384 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:04,386 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,389 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 22:51:04,391 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：用户查询
+INFO - 2023-07-21 22:51:04,391 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/queryUser
+INFO - 2023-07-21 22:51:04,392 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：有效查询用户
+INFO - 2023-07-21 22:51:04,392 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 22:51:04,392 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:51:04,393 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': 123839387391912}}
+INFO - 2023-07-21 22:51:04,396 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "查询成功!",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 22:51:04,397 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '查询成功'}}, {'eq': {'msg_code': 200}}]
+INFO - 2023-07-21 22:51:04,397 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->查询成功；实际结果-->查询成功!
+INFO - 2023-07-21 22:51:04,398 - assertions.py:61 -[assertions:equal_assert] - 相等断言成功：接口实际结果：{'msg_code': 200}，等于预期结果：{'msg_code': 200}
+INFO - 2023-07-21 22:51:04,398 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 22:51:04,400 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 22:51:04,401 - test_debug_api.py:52 -[test_debug_api:teardown_class] - 正在清理测试数据....
+INFO - 2023-07-21 22:55:39,272 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：用户登录
+INFO - 2023-07-21 22:55:39,272 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2023-07-21 22:55:39,272 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2023-07-21 22:55:39,273 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"}
+INFO - 2023-07-21 22:55:39,273 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 22:55:39,273 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': '{"user_name": "test01", "passwd": "admin123"}'}
+ERROR - 2023-07-21 22:55:39,276 - sendrequests.py:53 -[sendrequests:run_main] - 'str' object has no attribute 'items'
+INFO - 2023-07-21 23:55:15,851 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：用户登录
+INFO - 2023-07-21 23:55:15,852 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2023-07-21 23:55:15,852 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2023-07-21 23:55:15,853 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 23:55:15,853 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 23:55:15,854 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+INFO - 2023-07-21 23:55:15,863 - sendrequests.py:25 -[sendrequests:send_requests] - cookie：{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1NDkxNSwianRpIjoiNzYxMjA4OTgtMTY4MS00M2IyLWE5M2QtNjkzNTMxYmUxYjJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1NDkxNSwiZXhwIjoxNjg5OTU1ODE1fQ.zF2cb9n4RdOSvqPxfyrOZOxZCV17H_PyA9n1_AMbWAg'}}
+INFO - 2023-07-21 23:55:15,863 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "登录成功",
+  "msg_code": 200,
+  "token": "ffe611F6f4854d4f6faca13Df8268",
+  "userId": "5066477269396223658"
+}
+
+INFO - 2023-07-21 23:55:15,864 - apiutil.py:146 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2023-07-21 23:55:15,865 - apiutil.py:146 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2023-07-21 23:55:15,866 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '登录成功'}}]
+INFO - 2023-07-21 23:55:15,866 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->登录成功；实际结果-->登录成功
+INFO - 2023-07-21 23:55:15,867 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:15,867 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:15,871 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：获取物料信息
+INFO - 2023-07-21 23:55:15,871 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/getMaterial
+INFO - 2023-07-21 23:55:15,872 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：获取物料信息
+INFO - 2023-07-21 23:55:15,872 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 23:55:15,872 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1NDkxNSwianRpIjoiNzYxMjA4OTgtMTY4MS00M2IyLWE5M2QtNjkzNTMxYmUxYjJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1NDkxNSwiZXhwIjoxNjg5OTU1ODE1fQ.zF2cb9n4RdOSvqPxfyrOZOxZCV17H_PyA9n1_AMbWAg'}
+INFO - 2023-07-21 23:55:15,877 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "material": [
+    "1676511586856882178",
+    "1676511586856882134",
+    "1676511524756882178",
+    "1676590766856882178",
+    "1676511586812182178"
+  ],
+  "message": "操作成功"
+}
+
+INFO - 2023-07-21 23:55:15,878 - apiutil.py:175 -[apiutil:extract_data_list] - json提取到参数：{'materialId': ['1676511586856882178', '1676511586856882134', '1676511524756882178', '1676590766856882178', '1676511586812182178']}
+INFO - 2023-07-21 23:55:15,879 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 23:55:15,879 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 23:55:15,880 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:15,882 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:15,884 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:15,887 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：获取商品列表
+INFO - 2023-07-21 23:55:15,888 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/coupApply/cms/goodsList
+INFO - 2023-07-21 23:55:15,888 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：获取商品列表
+INFO - 2023-07-21 23:55:15,888 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 23:55:15,889 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 23:55:15,889 - sendrequests.py:48 -[sendrequests:run_main] - 请求参数：{'params': {'msgType': 'getHandsetListOfCust', 'page': 1}}
+INFO - 2023-07-21 23:55:15,892 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "api_info": "today:21 max:10000 all[90=21+33+36];expires:2030-12-31",
+  "cache": 0,
+  "error_code": "0000",
+  "goodsList": [
+    {
+      "goodsId": "18382788819",
+      "goods_count": "233",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/bcf848aa71c6389607ae7a84b70f1543.jpeg",
+      "goods_name": "【2件套】套装秋冬新款仿獭兔毛钉珠皮草毛毛短外套加厚大衣女装",
+      "original_price": "",
+      "unit_price": "￥99.00"
+    },
+    {
+      "goodsId": "33809635011",
+      "goods_count": "521",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/176019babfdecffa1d9f98f40b7e99b4.jpeg",
+      "goods_name": "好奇小森林心钻装纸尿裤M22拉拉裤L18/XL14超薄透气裤型尿不湿 1件装",
+      "original_price": "",
+      "unit_price": "￥108.00"
+    },
+    {
+      "goodsId": "56996760797",
+      "goods_count": "1181",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "冻干鸡小胸整块增肥营养发腮狗狗零食新手养猫零食幼猫零食100g",
+      "original_price": "",
+      "unit_price": "￥17.80"
+    },
+    {
+      "goodsId": "82193785267",
+      "goods_count": "3000+",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "【自营】ISB伊珊娜意大利水果系列宠物犬猫沐浴露除臭香波护毛素",
+      "original_price": "",
+      "unit_price": "￥650.00"
+    },
+    {
+      "goodsId": "74190550836",
+      "goods_count": "1000+",
+      "goods_image": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "goods_name": "【新品零0CM嵌入式】海尔电冰箱410L家用法式四门多门官方正品",
+      "original_price": "",
+      "unit_price": "￥5746.00"
+    }
+  ],
+  "reason": "",
+  "request_id": "request_id",
+  "secache": "c98b29872e8a4b28859db207944ba817",
+  "secache_date": "2023-07-21 23:34:45",
+  "secache_time": 1689953685000,
+  "translate_language": "zh-CN"
+}
+
+INFO - 2023-07-21 23:55:15,894 - apiutil.py:175 -[apiutil:extract_data_list] - json提取到参数：{'productId': ['18382788819', '33809635011', '56996760797', '82193785267', '74190550836']}
+INFO - 2023-07-21 23:55:15,895 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'error_code': '0000'}}]
+INFO - 2023-07-21 23:55:15,895 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->0000；实际结果-->0000
+INFO - 2023-07-21 23:55:15,896 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:15,897 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:15,899 - test_debug_api.py:15 -[test_debug_api:setup_class] - 环境初始化....
+INFO - 2023-07-21 23:55:15,900 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:15,918 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：新增用户
+INFO - 2023-07-21 23:55:15,919 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/addUser
+INFO - 2023-07-21 23:55:15,919 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：正常新增用户名*新增用户长度在allure中展示校验
+INFO - 2023-07-21 23:55:15,920 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 23:55:15,920 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 23:55:15,921 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'username': 'testadduser', 'password': 'tset6789890', 'role_id': 123456789, 'dates': '2023-07-21 23:55:15', 'phone': 13800000000, 'token': 'ffe611F6f4854d4f6faca13Df8268'}}
+INFO - 2023-07-21 23:55:15,956 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "新增成功",
+  "msg_code": 200
+}
+
+ERROR - 2023-07-21 23:55:15,957 - apiutil.py:151 -[apiutil:extract_data] - 'bool' object is not subscriptable
+INFO - 2023-07-21 23:55:15,957 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'status_code': 200}}, {'contains': {'msg': '新增成功'}}]
+INFO - 2023-07-21 23:55:15,957 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->新增成功；实际结果-->新增成功
+INFO - 2023-07-21 23:55:15,958 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:15,960 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:15,962 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:15,967 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：新增用户
+INFO - 2023-07-21 23:55:15,968 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/addUser
+INFO - 2023-07-21 23:55:15,969 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：异常新增用户校验
+INFO - 2023-07-21 23:55:15,970 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 23:55:15,970 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 23:55:15,971 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'username': 'testadduser', 'password': 'tset6789890', 'role_id': 123456789, 'dates': '2023-07-21 23:55:15', 'phone': 13800000000, 'token': 'ffe611F6f4854d4f6faca13Df8268'}}
+INFO - 2023-07-21 23:55:15,974 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "新增成功",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 23:55:15,975 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'status_code': 200}}, {'contains': {'msg': '新增失败'}}]
+ERROR - 2023-07-21 23:55:15,976 - assertions.py:46 -[assertions:contains_assert] - 响应文本断言失败：预期结果为【新增失败】,实际结果为【新增成功】
+ERROR - 2023-07-21 23:55:15,976 - assertions.py:112 -[assertions:assert_result] - 测试失败
+ERROR - 2023-07-21 23:55:15,977 - apiutil.py:115 -[apiutil:specification_yaml] - 
+INFO - 2023-07-21 23:55:16,151 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:16,153 - test_debug_api.py:52 -[test_debug_api:teardown_class] - 正在清理测试数据....
+INFO - 2023-07-21 23:55:16,155 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:16,161 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：货主下单
+INFO - 2023-07-21 23:55:16,161 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/create
+INFO - 2023-07-21 23:55:16,161 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：货主下单
+INFO - 2023-07-21 23:55:16,161 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 23:55:16,162 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1NDkxNSwianRpIjoiNzYxMjA4OTgtMTY4MS00M2IyLWE5M2QtNjkzNTMxYmUxYjJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1NDkxNSwiZXhwIjoxNjg5OTU1ODE1fQ.zF2cb9n4RdOSvqPxfyrOZOxZCV17H_PyA9n1_AMbWAg'}
+INFO - 2023-07-21 23:55:16,162 - sendrequests.py:45 -[sendrequests:run_main] - 请求参数：{'json': {'orderInfo': {'template': 'define', 'urgentType': 2, 'cusName': '总仓', 'orderType': 1, 'charter': 2, 'planType': 1, 'transStartTime': '2023-07-21 23:55:16', 'transEndTime': '2023-07-16 10:38:58', 'orderMark': '货主备注', 'cusId': 1661242770195464193}, 'orderCapacityList': [{'materialCategoryId': '1676511586812182178', 'materialCategory': '粮食', 'materialName': '小麦', 'materialUnit': 'KG', 'materialUnitId': 1660891402561581058, 'settlementUnit': 'KG', 'syncMaterialId': 4, 'materialId': 1661349087048306690, 'sendCusId': 1661663745663741954, 'sendAdrName': '长宁县五谷粮食购销有限责任公司'}]}}
+INFO - 2023-07-21 23:55:16,188 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功",
+  "orderNo": "DD20230721233445201"
+}
+
+INFO - 2023-07-21 23:55:16,189 - apiutil.py:146 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2023-07-21 23:55:16,190 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 23:55:16,191 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 23:55:16,191 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:16,193 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:16,196 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:16,206 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：集团接单
+INFO - 2023-07-21 23:55:16,207 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/pc/order/master/receive
+INFO - 2023-07-21 23:55:16,207 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：集团接单
+INFO - 2023-07-21 23:55:16,207 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 23:55:16,207 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1NDkxNSwianRpIjoiNzYxMjA4OTgtMTY4MS00M2IyLWE5M2QtNjkzNTMxYmUxYjJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1NDkxNSwiZXhwIjoxNjg5OTU1ODE1fQ.zF2cb9n4RdOSvqPxfyrOZOxZCV17H_PyA9n1_AMbWAg'}
+INFO - 2023-07-21 23:55:16,208 - sendrequests.py:45 -[sendrequests:run_main] - 请求参数：{'json': {'orderId': 'DD20230721233445201'}}
+INFO - 2023-07-21 23:55:16,212 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功"
+}
+
+INFO - 2023-07-21 23:55:16,213 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 23:55:16,213 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 23:55:16,214 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:16,215 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:16,218 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:16,227 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：集团分配物流公司
+INFO - 2023-07-21 23:55:16,228 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/api/order/pc/order/assign
+INFO - 2023-07-21 23:55:16,228 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：集团分配物流公司
+INFO - 2023-07-21 23:55:16,228 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO - 2023-07-21 23:55:16,229 - sendrequests.py:36 -[sendrequests:run_main] - cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1NDkxNSwianRpIjoiNzYxMjA4OTgtMTY4MS00M2IyLWE5M2QtNjkzNTMxYmUxYjJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1NDkxNSwiZXhwIjoxNjg5OTU1ODE1fQ.zF2cb9n4RdOSvqPxfyrOZOxZCV17H_PyA9n1_AMbWAg'}
+INFO - 2023-07-21 23:55:16,229 - sendrequests.py:45 -[sendrequests:run_main] - 请求参数：{'json': {'orderId': 'DD20230721233445201', 'orgId': '4140913758110176843'}}
+INFO - 2023-07-21 23:55:16,233 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功"
+}
+
+INFO - 2023-07-21 23:55:16,234 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO - 2023-07-21 23:55:16,235 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO - 2023-07-21 23:55:16,236 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:16,239 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:16,241 - test_debug_api.py:15 -[test_debug_api:setup_class] - 环境初始化....
+INFO - 2023-07-21 23:55:16,242 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:16,244 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：修改用户
+INFO - 2023-07-21 23:55:16,245 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/updateUser
+INFO - 2023-07-21 23:55:16,245 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：正常修改用户信息
+INFO - 2023-07-21 23:55:16,245 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 23:55:16,246 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 23:55:16,246 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'username': 'testadduser', 'password': 'tset6789#$123', 'role_id': 89588181111112343, 'dates': '2023-12-31', 'phone': 13800000000}}
+INFO - 2023-07-21 23:55:16,251 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "更新成功",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 23:55:16,254 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'status_code': 200}}, {'contains': {'msg': '更新成功'}}]
+INFO - 2023-07-21 23:55:16,254 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->更新成功；实际结果-->更新成功
+INFO - 2023-07-21 23:55:16,255 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:16,257 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:16,259 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:16,262 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：删除用户
+INFO - 2023-07-21 23:55:16,262 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/deleteUser
+INFO - 2023-07-21 23:55:16,263 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：有效删除用户
+INFO - 2023-07-21 23:55:16,263 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 23:55:16,263 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 23:55:16,264 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': 123839387391912}}
+INFO - 2023-07-21 23:55:16,267 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "删除成功!",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 23:55:16,269 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '删除成功'}}]
+INFO - 2023-07-21 23:55:16,270 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->删除成功；实际结果-->删除成功!
+INFO - 2023-07-21 23:55:16,271 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:16,273 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:16,276 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:16,278 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：删除用户
+INFO - 2023-07-21 23:55:16,278 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/deleteUser
+INFO - 2023-07-21 23:55:16,279 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：无效删除用户
+INFO - 2023-07-21 23:55:16,279 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 23:55:16,280 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 23:55:16,280 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': 1212718219298}}
+INFO - 2023-07-21 23:55:16,284 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "msg": "删除失败，用户id不存在!",
+  "msg_code": 9001
+}
+
+INFO - 2023-07-21 23:55:16,285 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '删除失败'}}]
+INFO - 2023-07-21 23:55:16,286 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->删除失败；实际结果-->删除失败，用户id不存在!
+INFO - 2023-07-21 23:55:16,287 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:16,288 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:16,291 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:16,294 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：删除用户
+INFO - 2023-07-21 23:55:16,295 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/deleteUser
+INFO - 2023-07-21 23:55:16,295 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：删除接口传参类型错误
+INFO - 2023-07-21 23:55:16,296 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 23:55:16,296 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 23:55:16,297 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': '1212718219298'}}
+INFO - 2023-07-21 23:55:16,300 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "msg": "删除失败，用户id不存在!",
+  "msg_code": 9001
+}
+
+INFO - 2023-07-21 23:55:16,301 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '删除失败'}}]
+INFO - 2023-07-21 23:55:16,301 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->删除失败；实际结果-->删除失败，用户id不存在!
+INFO - 2023-07-21 23:55:16,303 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:16,304 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:16,306 - conftest.py:23 -[conftest:start_test_end] - -----------------接口测试开始---------------------
+INFO - 2023-07-21 23:55:16,309 - sendrequests.py:32 -[sendrequests:run_main] - 接口名称：用户查询
+INFO - 2023-07-21 23:55:16,309 - sendrequests.py:33 -[sendrequests:run_main] - 接口请求地址：http://127.0.0.1:8787/dar/user/queryUser
+INFO - 2023-07-21 23:55:16,310 - sendrequests.py:34 -[sendrequests:run_main] - 测试用例名称：有效查询用户
+INFO - 2023-07-21 23:55:16,310 - sendrequests.py:35 -[sendrequests:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2023-07-21 23:55:16,311 - sendrequests.py:36 -[sendrequests:run_main] - cookies：None
+INFO - 2023-07-21 23:55:16,312 - sendrequests.py:42 -[sendrequests:run_main] - 请求参数：{'data': {'user_id': 123839387391912}}
+INFO - 2023-07-21 23:55:16,316 - sendrequests.py:26 -[sendrequests:send_requests] - 接口返回信息：{
+  "error_code": null,
+  "msg": "查询成功!",
+  "msg_code": 200
+}
+
+INFO - 2023-07-21 23:55:16,317 - assertions.py:90 -[assertions:assert_result] - yaml文件的预期结果：[{'contains': {'msg': '查询成功'}}, {'eq': {'msg_code': 200}}]
+INFO - 2023-07-21 23:55:16,317 - assertions.py:39 -[assertions:contains_assert] - 字符串包含断言成功：预期结果-->查询成功；实际结果-->查询成功!
+INFO - 2023-07-21 23:55:16,318 - assertions.py:61 -[assertions:equal_assert] - 相等断言成功：接口实际结果：{'msg_code': 200}，等于预期结果：{'msg_code': 200}
+INFO - 2023-07-21 23:55:16,318 - assertions.py:109 -[assertions:assert_result] - 测试成功
+INFO - 2023-07-21 23:55:16,320 - conftest.py:25 -[conftest:start_test_end] - -----------------接口测试结束---------------------
+INFO - 2023-07-21 23:55:16,321 - test_debug_api.py:52 -[test_debug_api:teardown_class] - 正在清理测试数据....

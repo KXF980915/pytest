@@ -1,0 +1,35 @@
+INFO - 2023-08-10 20:34:23,170 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+ERROR - 2023-08-10 20:34:23,499 - connectDb.py:103 -[connectDb:get] - 从Redis中获取[huaibjj:openapi:token:1ad39baa-b171-4590-b519-b17b0efc3036]失败，失败原因：invalid DB index
+INFO - 2023-08-10 20:35:15,882 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+ERROR - 2023-08-10 20:35:16,199 - connectDb.py:103 -[connectDb:get] - 从Redis中获取[huaibjj:openapi:token:1ad39baa-b171-4590-b519-b17b0efc3036]失败，失败原因：invalid DB index
+INFO - 2023-08-10 20:36:35,513 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+ERROR - 2023-08-10 20:36:37,833 - connectDb.py:103 -[connectDb:get] - 从Redis中获取[huaibjj:openapi:token:1ad39baa-b171-4590-b519-b17b0efc3036]失败，失败原因：invalid DB index
+INFO - 2023-08-10 20:37:11,642 - connectDb.py:85 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+INFO - 2023-08-10 20:37:32,533 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+INFO - 2023-08-10 20:37:39,145 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+ERROR - 2023-08-10 20:37:39,435 - connectDb.py:103 -[connectDb:get] - 从Redis中获取[huaibjj:openapi:token:1ad39baa-b171-4590-b519-b17b0efc3036]失败，失败原因：invalid DB index
+INFO - 2023-08-10 20:37:59,453 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+INFO - 2023-08-10 20:38:08,728 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+ERROR - 2023-08-10 20:38:09,073 - connectDb.py:103 -[connectDb:get] - 从Redis中获取[huaibjj:openapi:token:1ad39baa-b171-4590-b519-b17b0efc3036]失败，失败原因：invalid DB index
+INFO - 2023-08-10 20:39:25,769 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+INFO - 2023-08-10 20:40:21,892 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+INFO - 2023-08-10 20:41:16,139 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+INFO - 2023-08-10 20:42:06,131 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+ERROR - 2023-08-10 20:42:06,507 - connectDb.py:105 -[connectDb:get] - 从Redis中获取[huaibjj:verify:inNet:failNum:津C31691@黄色]失败，失败原因：MOVED 2097 172.17.33.214:6380
+INFO - 2023-08-10 20:48:28,074 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+ERROR - 2023-08-10 20:48:28,214 - connectDb.py:98 -[connectDb:redis_except] - Redis Error：Error while reading from socket: (10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)
+INFO - 2023-08-10 20:48:37,014 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+ERROR - 2023-08-10 20:48:39,121 - connectDb.py:96 -[connectDb:redis_except] - 请检查Redis是否使用了集群模式或者主从复制的情况，数据被迁移到了另外一个Redis实例上：MOVED 2097 172.17.33.214:6380
+INFO - 2023-08-10 20:48:49,403 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+ERROR - 2023-08-10 20:48:49,753 - connectDb.py:96 -[connectDb:redis_except] - 请检查Redis是否使用了集群模式或者主从复制的情况，数据被迁移到了另外一个Redis实例上：MOVED 2097 172.17.33.214:6380
+INFO - 2023-08-10 20:53:12,183 - connectDb.py:87 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+ERROR - 2023-08-10 20:53:12,542 - connectDb.py:96 -[connectDb:redis_except] - 请检查Redis是否使用了集群模式或者主从复制的情况，数据被迁移到了另外一个Redis实例上：MOVED 2097 172.17.33.214:6380
+INFO - 2023-08-10 21:16:59,468 - connectDb.py:94 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+INFO - 2023-08-10 21:18:03,803 - connectDb.py:96 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+INFO - 2023-08-10 21:18:53,995 - connectDb.py:97 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+INFO - 2023-08-10 21:20:13,847 - connectDb.py:99 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+INFO - 2023-08-10 21:24:49,158 - connectDb.py:97 -[connectDb:__init__] - 连接到Redis集群服务，host：172.17.33.214:6379,172.17.33.214:6380
+INFO - 2023-08-10 21:25:06,899 - connectDb.py:101 -[connectDb:__init__] - 连接到Redis服务器：ip：172.17.33.214
+ERROR - 2023-08-10 21:25:07,249 - connectDb.py:110 -[connectDb:redis_except] - 请检查Redis是否使用了集群模式或者主从复制的情况，数据被迁移到了另外一个Redis实例上：MOVED 2097 172.17.33.214:6380
+INFO - 2023-08-10 21:25:33,396 - connectDb.py:97 -[connectDb:__init__] - 连接到Redis集群服务，host：172.17.33.214:6379,172.17.33.214:6380
+INFO - 2023-08-10 21:26:15,799 - connectDb.py:97 -[connectDb:__init__] - 连接到Redis集群服务，host：172.17.33.214:6379,172.17.33.214:6380
