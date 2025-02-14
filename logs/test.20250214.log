@@ -1,0 +1,116 @@
+ERROR - 2025-02-14 22:09:26,390 - readyaml.py:28 -[readyaml:get_testcase_yaml] - [./testcase/Single interface/addUser.yaml]文件未找到，请检查路径是否正确
+ERROR - 2025-02-14 22:09:26,391 - readyaml.py:28 -[readyaml:get_testcase_yaml] - [./testcase/Single interface/updateUser.yaml]文件未找到，请检查路径是否正确
+ERROR - 2025-02-14 22:09:26,391 - readyaml.py:28 -[readyaml:get_testcase_yaml] - [./testcase/Single interface/deleteUser.yaml]文件未找到，请检查路径是否正确
+ERROR - 2025-02-14 22:09:26,391 - readyaml.py:28 -[readyaml:get_testcase_yaml] - [./testcase/Single interface/queryUser.yaml]文件未找到，请检查路径是否正确
+ERROR - 2025-02-14 22:26:15,888 - readyaml.py:28 -[readyaml:get_testcase_yaml] - [./data/loginName.yaml]文件未找到，请检查路径是否正确
+ERROR - 2025-02-14 22:26:15,889 - conftest.py:32 -[conftest:system_login] - 登录接口出现异常，导致后续接口无法继续运行，请检查程序！，'NoneType' object is not subscriptable
+ERROR - 2025-02-14 22:39:03,130 - readyaml.py:28 -[readyaml:get_testcase_yaml] - [./data/loginName.yaml]文件未找到，请检查路径是否正确
+ERROR - 2025-02-14 22:39:03,131 - conftest.py:32 -[conftest:system_login] - 登录接口出现异常，导致后续接口无法继续运行，请检查程序！，'NoneType' object is not subscriptable
+ERROR - 2025-02-14 22:39:26,689 - readyaml.py:28 -[readyaml:get_testcase_yaml] - [./data/loginName.yaml]文件未找到，请检查路径是否正确
+ERROR - 2025-02-14 22:39:26,691 - conftest.py:32 -[conftest:system_login] - 登录接口出现异常，导致后续接口无法继续运行，请检查程序！，'NoneType' object is not subscriptable
+INFO - 2025-02-14 22:43:15,147 - sendrequest.py:135 -[sendrequest:run_main] - 接口名称：用户登录
+INFO - 2025-02-14 22:43:15,147 - sendrequest.py:136 -[sendrequest:run_main] - 请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2025-02-14 22:43:15,147 - sendrequest.py:137 -[sendrequest:run_main] - 请求方式：post
+INFO - 2025-02-14 22:43:15,147 - sendrequest.py:138 -[sendrequest:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2025-02-14 22:43:15,148 - sendrequest.py:139 -[sendrequest:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2025-02-14 22:43:15,157 - sendrequest.py:140 -[sendrequest:run_main] - Cookie：None
+INFO - 2025-02-14 22:43:15,157 - sendrequest.py:144 -[sendrequest:run_main] - 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+INFO - 2025-02-14 22:43:15,163 - sendrequest.py:107 -[sendrequest:send_request] - cookie：{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczOTU0NDE5NSwianRpIjoiYmU1Y2Q1ZDAtZjM2ZC00ODEzLWJmOTQtOGVhNzM5MTUyYTEyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTczOTU0NDE5NSwiZXhwIjoxNzM5NTQ1MDk1fQ.qnarxWdZmQG63vcBxBYswsuBSgpQq2b2xst5kLESkNA'}}
+INFO - 2025-02-14 22:43:15,163 - sendrequest.py:108 -[sendrequest:send_request] - 接口返回信息：{"error_code":null,"msg":"登录成功","msg_code":200,"orgId":"4140913758110176843","token":"Df4D7e1E1D76De8B45F51ED4ac18a","userId":"0197401646779794304"}
+
+INFO - 2025-02-14 22:43:15,163 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:43:15,164 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:43:15,164 - assertions.py:170 -[assertions:assert_result] - yaml文件预期结果：[{'contains': {'msg': '登录成功'}}]
+INFO - 2025-02-14 22:43:15,165 - assertions.py:45 -[assertions:contains_assert] - 字符串包含断言成功：预期结果【登录成功】,实际结果【登录成功】
+INFO - 2025-02-14 22:43:15,165 - assertions.py:198 -[assertions:assert_result] - 测试成功
+INFO - 2025-02-14 22:43:15,165 - conftest.py:20 -[conftest:start_test_and_end] - -------------接口测试开始--------------
+INFO - 2025-02-14 22:43:15,167 - sendrequest.py:135 -[sendrequest:run_main] - 接口名称：用户登录
+INFO - 2025-02-14 22:43:15,167 - sendrequest.py:136 -[sendrequest:run_main] - 请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2025-02-14 22:43:15,167 - sendrequest.py:137 -[sendrequest:run_main] - 请求方式：post
+INFO - 2025-02-14 22:43:15,167 - sendrequest.py:138 -[sendrequest:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2025-02-14 22:43:15,167 - sendrequest.py:139 -[sendrequest:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2025-02-14 22:43:15,167 - sendrequest.py:140 -[sendrequest:run_main] - Cookie：None
+INFO - 2025-02-14 22:43:15,167 - sendrequest.py:144 -[sendrequest:run_main] - 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+INFO - 2025-02-14 22:43:15,172 - sendrequest.py:107 -[sendrequest:send_request] - cookie：{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczOTU0NDE5NSwianRpIjoiNDYzZWRiOTUtMTQxNS00Y2VkLTlmNTctYmYzYzY3NTI2YmVhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTczOTU0NDE5NSwiZXhwIjoxNzM5NTQ1MDk1fQ.5-b49gioDwgeodALigBpIv9GdIXyu6GKRQzqSWRGnrw'}}
+INFO - 2025-02-14 22:43:15,172 - sendrequest.py:108 -[sendrequest:send_request] - 接口返回信息：{"error_code":null,"msg":"登录成功","msg_code":200,"orgId":"4140913758110176843","token":"fadd1da005398993bDEbca18BbE0d","userId":"0197401646779794304"}
+
+INFO - 2025-02-14 22:43:15,172 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:43:15,172 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:43:15,173 - assertions.py:170 -[assertions:assert_result] - yaml文件预期结果：[{'contains': {'msg': '登录成功'}}]
+INFO - 2025-02-14 22:43:15,173 - assertions.py:45 -[assertions:contains_assert] - 字符串包含断言成功：预期结果【登录成功】,实际结果【登录成功】
+INFO - 2025-02-14 22:43:15,173 - assertions.py:198 -[assertions:assert_result] - 测试成功
+INFO - 2025-02-14 22:43:15,174 - conftest.py:22 -[conftest:start_test_and_end] - -------------接口测试结束--------------
+INFO - 2025-02-14 22:43:56,690 - sendrequest.py:135 -[sendrequest:run_main] - 接口名称：用户登录
+INFO - 2025-02-14 22:43:56,690 - sendrequest.py:136 -[sendrequest:run_main] - 请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2025-02-14 22:43:56,690 - sendrequest.py:137 -[sendrequest:run_main] - 请求方式：post
+INFO - 2025-02-14 22:43:56,690 - sendrequest.py:138 -[sendrequest:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2025-02-14 22:43:56,690 - sendrequest.py:139 -[sendrequest:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2025-02-14 22:43:56,699 - sendrequest.py:140 -[sendrequest:run_main] - Cookie：None
+INFO - 2025-02-14 22:43:56,699 - sendrequest.py:144 -[sendrequest:run_main] - 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+INFO - 2025-02-14 22:43:56,706 - sendrequest.py:107 -[sendrequest:send_request] - cookie：{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczOTU0NDIzNiwianRpIjoiNGJmMjk3NDItOWZhNS00OTJhLWFmMzItZGZhY2Y5ZjRmOTBlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTczOTU0NDIzNiwiZXhwIjoxNzM5NTQ1MTM2fQ.QYW7OD49Tw6mikl9pd1PYokQsa5tVZloT8gPObHR0lo'}}
+INFO - 2025-02-14 22:43:56,707 - sendrequest.py:108 -[sendrequest:send_request] - 接口返回信息：{"error_code":null,"msg":"登录成功","msg_code":200,"orgId":"6140913758128971280","token":"bD3E4b10Dea8f79a1bfFcdCd13c7F","userId":"0197401646779794304"}
+
+INFO - 2025-02-14 22:43:56,707 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:43:56,708 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:43:56,708 - assertions.py:170 -[assertions:assert_result] - yaml文件预期结果：[{'contains': {'msg': '登录成功'}}]
+INFO - 2025-02-14 22:43:56,708 - assertions.py:45 -[assertions:contains_assert] - 字符串包含断言成功：预期结果【登录成功】,实际结果【登录成功】
+INFO - 2025-02-14 22:43:56,708 - assertions.py:198 -[assertions:assert_result] - 测试成功
+INFO - 2025-02-14 22:43:56,709 - conftest.py:20 -[conftest:start_test_and_end] - -------------接口测试开始--------------
+INFO - 2025-02-14 22:43:56,711 - sendrequest.py:135 -[sendrequest:run_main] - 接口名称：用户登录
+INFO - 2025-02-14 22:43:56,711 - sendrequest.py:136 -[sendrequest:run_main] - 请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2025-02-14 22:43:56,711 - sendrequest.py:137 -[sendrequest:run_main] - 请求方式：post
+INFO - 2025-02-14 22:43:56,711 - sendrequest.py:138 -[sendrequest:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2025-02-14 22:43:56,711 - sendrequest.py:139 -[sendrequest:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2025-02-14 22:43:56,711 - sendrequest.py:140 -[sendrequest:run_main] - Cookie：None
+INFO - 2025-02-14 22:43:56,711 - sendrequest.py:144 -[sendrequest:run_main] - 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+INFO - 2025-02-14 22:43:56,715 - sendrequest.py:107 -[sendrequest:send_request] - cookie：{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczOTU0NDIzNiwianRpIjoiM2RlZjc3NjQtYzNmZS00YmU4LThiZTMtMDY2NmFlYzc3ZDdjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTczOTU0NDIzNiwiZXhwIjoxNzM5NTQ1MTM2fQ.z_-jYw1gX8132jaJhlIOQQy2YSx8keicrce294Ckz0w'}}
+INFO - 2025-02-14 22:43:56,716 - sendrequest.py:108 -[sendrequest:send_request] - 接口返回信息：{"error_code":null,"msg":"登录成功","msg_code":200,"orgId":"4140913758110176843","token":"76fcab5Bb1DbaA7c1BD14dFAE9F5A","userId":"0197401646779794304"}
+
+INFO - 2025-02-14 22:43:56,716 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:43:56,716 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:43:56,717 - assertions.py:170 -[assertions:assert_result] - yaml文件预期结果：[{'contains': {'msg': '登录成功'}}]
+INFO - 2025-02-14 22:43:56,717 - assertions.py:45 -[assertions:contains_assert] - 字符串包含断言成功：预期结果【登录成功】,实际结果【登录成功】
+INFO - 2025-02-14 22:43:56,717 - assertions.py:198 -[assertions:assert_result] - 测试成功
+INFO - 2025-02-14 22:43:56,718 - conftest.py:22 -[conftest:start_test_and_end] - -------------接口测试结束--------------
+INFO - 2025-02-14 22:44:21,853 - conftest.py:20 -[conftest:start_test_and_end] - -------------接口测试开始--------------
+INFO - 2025-02-14 22:44:21,855 - sendrequest.py:135 -[sendrequest:run_main] - 接口名称：用户登录
+INFO - 2025-02-14 22:44:21,855 - sendrequest.py:136 -[sendrequest:run_main] - 请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2025-02-14 22:44:21,855 - sendrequest.py:137 -[sendrequest:run_main] - 请求方式：post
+INFO - 2025-02-14 22:44:21,856 - sendrequest.py:138 -[sendrequest:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2025-02-14 22:44:21,856 - sendrequest.py:139 -[sendrequest:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2025-02-14 22:44:21,865 - sendrequest.py:140 -[sendrequest:run_main] - Cookie：None
+INFO - 2025-02-14 22:44:21,865 - sendrequest.py:144 -[sendrequest:run_main] - 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+INFO - 2025-02-14 22:44:21,872 - sendrequest.py:107 -[sendrequest:send_request] - cookie：{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczOTU0NDI2MSwianRpIjoiOTJlYzRlMDItNGQ1Ny00MWEyLWI3YWItM2ZjMDAyMWE1N2FjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTczOTU0NDI2MSwiZXhwIjoxNzM5NTQ1MTYxfQ.wRarmaFGGzalnRQUjnIrggVrtQv0aR7I34YGosgxMUw'}}
+INFO - 2025-02-14 22:44:21,872 - sendrequest.py:108 -[sendrequest:send_request] - 接口返回信息：{"error_code":null,"msg":"登录成功","msg_code":200,"orgId":"6140913758128971280","token":"4F1C3Bc2E86Fa69aB30B14C0B0e6c","userId":"0197401646779794304"}
+
+INFO - 2025-02-14 22:44:21,873 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:44:21,874 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:44:21,875 - assertions.py:170 -[assertions:assert_result] - yaml文件预期结果：[{'contains': {'msg': '登录成功'}}]
+INFO - 2025-02-14 22:44:21,875 - assertions.py:45 -[assertions:contains_assert] - 字符串包含断言成功：预期结果【登录成功】,实际结果【登录成功】
+INFO - 2025-02-14 22:44:21,875 - assertions.py:198 -[assertions:assert_result] - 测试成功
+INFO - 2025-02-14 22:44:21,876 - conftest.py:22 -[conftest:start_test_and_end] - -------------接口测试结束--------------
+INFO - 2025-02-14 22:44:28,645 - conftest.py:20 -[conftest:start_test_and_end] - -------------接口测试开始--------------
+INFO - 2025-02-14 22:44:28,647 - sendrequest.py:135 -[sendrequest:run_main] - 接口名称：用户登录
+INFO - 2025-02-14 22:44:28,647 - sendrequest.py:136 -[sendrequest:run_main] - 请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2025-02-14 22:44:28,647 - sendrequest.py:137 -[sendrequest:run_main] - 请求方式：post
+INFO - 2025-02-14 22:44:28,647 - sendrequest.py:138 -[sendrequest:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2025-02-14 22:44:28,647 - sendrequest.py:139 -[sendrequest:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2025-02-14 22:44:28,647 - sendrequest.py:140 -[sendrequest:run_main] - Cookie：None
+INFO - 2025-02-14 22:44:28,647 - sendrequest.py:144 -[sendrequest:run_main] - 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+INFO - 2025-02-14 22:44:28,653 - sendrequest.py:107 -[sendrequest:send_request] - cookie：{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczOTU0NDI2OCwianRpIjoiOGVhZGI4MjgtNDQ4My00MTQ0LTlhNGQtYjE5ZjFjNzk4Y2NiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTczOTU0NDI2OCwiZXhwIjoxNzM5NTQ1MTY4fQ.WvM_yYJnPXY2UR9IhX2HQbUGC4e4Iwyvsi7POA9K9sE'}}
+INFO - 2025-02-14 22:44:28,653 - sendrequest.py:108 -[sendrequest:send_request] - 接口返回信息：{"error_code":null,"msg":"登录成功","msg_code":200,"orgId":"4140913758110176843","token":"bb07dA0E386e71337aEa3CAdcbaB2","userId":"0197401646779794304"}
+
+INFO - 2025-02-14 22:44:28,654 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:44:28,654 - apiutil.py:154 -[apiutil:extract_data] - 提取接口的返回值：
+INFO - 2025-02-14 22:44:28,655 - assertions.py:170 -[assertions:assert_result] - yaml文件预期结果：[{'contains': {'msg': '登录成功'}}]
+INFO - 2025-02-14 22:44:28,655 - assertions.py:45 -[assertions:contains_assert] - 字符串包含断言成功：预期结果【登录成功】,实际结果【登录成功】
+INFO - 2025-02-14 22:44:28,655 - assertions.py:198 -[assertions:assert_result] - 测试成功
+INFO - 2025-02-14 22:44:28,656 - conftest.py:22 -[conftest:start_test_and_end] - -------------接口测试结束--------------
+INFO - 2025-02-14 22:45:33,061 - sendrequest.py:135 -[sendrequest:run_main] - 接口名称：用户登录
+INFO - 2025-02-14 22:45:33,061 - sendrequest.py:136 -[sendrequest:run_main] - 请求地址：http://127.0.0.1:8787/dar/user/login
+INFO - 2025-02-14 22:45:33,062 - sendrequest.py:137 -[sendrequest:run_main] - 请求方式：post
+INFO - 2025-02-14 22:45:33,062 - sendrequest.py:138 -[sendrequest:run_main] - 测试用例名称：用户名和密码正确登录验证
+INFO - 2025-02-14 22:45:33,062 - sendrequest.py:139 -[sendrequest:run_main] - 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO - 2025-02-14 22:45:33,062 - sendrequest.py:140 -[sendrequest:run_main] - Cookie：None
+INFO - 2025-02-14 22:45:33,062 - sendrequest.py:144 -[sendrequest:run_main] - 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+ERROR - 2025-02-14 22:45:35,094 - sendrequest.py:110 -[sendrequest:send_request] - ConnectionError--连接异常
